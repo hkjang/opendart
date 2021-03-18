@@ -1,0 +1,36 @@
+{
+  "name": "opendart",
+  "version": "1.0.0",
+  "description": "Javascript opendart API package, Support Node.js",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./node_modules/webpack/bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hkjang/opendart.git"
+  },
+  "keywords": [
+    "opendart",
+    "dart",
+    "nodejs",
+    "재무제표",
+    "상장기업",
+    "사업보고서",
+    "전자공시",
+    "공시정보"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/hkjang/opendart#readme",
+  "bugs": {
+    "url": "https://github.com/hkjang/opendart/issues"
+  },
+  "files": [
+    "index.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
