@@ -9,7 +9,7 @@ function Request () {}
 /**
  * 'get' request
  *
- * @param {string} accessToken - Tistory Access Token
+ * @param {string} accessToken - Access Token
  * @param {string} url - Request url
  * @param {Object} options - Params
  */
