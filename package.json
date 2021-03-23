@@ -1,6 +1,6 @@
 {
   "name": "opendart",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Javascript opendart API package, Support Node.js",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,7 @@
   "files": [
     "index.js",
     "LICENSE",
+    "src/request.js",
     "README.md"
   ],
   "dependencies": {
