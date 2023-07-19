@@ -159,6 +159,14 @@ const opendart = {
       return Request.get(accessToken, '/fricDecsn.json', options)
     },
     /**
+     * 유무상증자 결정 API
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    pifricDecsn(accessToken, options) {
+      return Request.get(accessToken, '/pifricDecsn.json', options)
+    },
+    /**
      * 감자 결정 API
      * @param {string} accessToken
      * @param {keyIssuesReportOptions} options
