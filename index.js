@@ -1,5 +1,12 @@
 const Request = require('./src/request')
 
+/**
+ * 주요사항보고서 주요정보 API 공통 필수 파라미터
+ * @typedef {Object} keyIssuesReportOptions
+ * @property {string} corp_code - 고유번호
+ * @property {string} bgn_de - 검색시작 접수일자(YYYYMMDD)
+ * @property {string} end_de - 검색종료 접수일자(YYYYMMDD)
+ */
 const opendart = {
   disclosure: {
     /** 공시검색 API */
@@ -100,6 +107,298 @@ const opendart = {
     elestock(accessToken, options = {}) {
       return Request.get(accessToken, '/elestock.json', options)
     }
+  },
+  /** 주요사항보고서 주요정보 */
+  keyIssuesReport: {
+    /** 
+     * 부도발생
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    dfOcr(accessToken, options) {
+      return Request.get(accessToken, '/dfOcr.json', options)
+    },
+    /** 
+     * 영업정지
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    bsnSp(accessToken, options) {
+      return Request.get(accessToken, '/bsnSp.json', options)
+    },
+    /**
+     * 회생절차 개시신청
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    ctrcvsBgrq(accessToken, options) {
+      return Request.get(accessToken, '/ctrcvsBgrq.json', options)
+    },
+    /**
+     * 해산사유 발생
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    dsRsOcr(accessToken, options) {
+      return Request.get(accessToken, '/dsRsOcr.json', options)
+    },
+    /**
+     * 유상증자 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    piicDecsn(accessToken, options) {
+      return Request.get(accessToken, '/piicDecsn.json', options)
+    },
+    /**
+     * 무상증자 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    fricDecsn(accessToken, options) {
+      return Request.get(accessToken, '/fricDecsn.json', options)
+    },
+    /**
+     * 감자 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    crDecsn(accessToken, options) {
+      return Request.get(accessToken, '/crDecsn.json', options)
+    },
+    /**
+     * 채권은행 등의 관리절차 개시
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    bnkMngtPcbg(accessToken, options) {
+      return Request.get(accessToken, '/bnkMngtPcbg.json', options)
+    },
+    /**
+     * 소송 등의 제기
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    lwstLg(accessToken, options) {
+      return Request.get(accessToken, '/lwstLg.json', options)
+    },
+    /**
+     * 해외 증권시장 주권등 상장 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    ovLstDecsn(accessToken, options) {
+      return Request.get(accessToken, '/ovLstDecsn.json', options)
+    },
+    /**
+     * 해외 증권시장 주권등 상장폐지 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    ovDlstDecsn(accessToken, options) {
+      return Request.get(accessToken, '/ovDlstDecsn.json', options)
+    },
+    /**
+     * 해외 증권시장 주권등 상장
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    ovLst(accessToken, options) {
+      return Request.get(accessToken, '/ovLst.json', options)
+    },
+    /**
+     * 해외 증권시장 주권등 상장폐지
+     * @param {string} accessToken 
+     * @param {keyIssuesReportOptions} options 
+     * @returns 
+     */
+    ovDlst(accessToken, options) {
+      return Request.get(accessToken, '/ovDlst.json', options)
+    },
+    /**
+     * 전환사채권 발행결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    cvbdIsDecsn(accessToken, options) {
+      return Request.get(accessToken, '/cvbdIsDecsn.json', options)
+    },
+    /**
+     * 신주인수권부사채권 발행결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    bdwtIsDecsn(accessToken, options) {
+      return Request.get(accessToken, '/bdwtIsDecsn.json', options)
+    },
+    /**
+     * 신주인수권부사채권 발행결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    bdwtIsDecsn(accessToken, options) {
+      return Request.get(accessToken, '/bdwtIsDecsn.json', options)
+    },
+    /**
+     * 교환사채권 발행결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    exbdIsDecsn(accessToken, options) {
+      return Request.get(accessToken, '/exbdIsDecsn.json', options)
+    },
+    /**
+     * 채권은행 등의 관리절차 중단
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    bnkMngtPcsp(accessToken, options) {
+      return Request.get(accessToken, '/bnkMngtPcsp.json', options)
+    },
+    /**
+     * 상각형 조건부자본증권 발행결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    wdCocobdIsDecsn(accessToken, options) {
+      return Request.get(accessToken, '/wdCocobdIsDecsn.json', options)
+    },
+    /**
+     * 자산양수도(기타), 풋백옵션
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    astInhtrfEtcPtbkOpt(accessToken, options) {
+      return Request.get(accessToken, '/astInhtrfEtcPtbkOpt.json', options)
+    },
+    /**
+     * 타법인 주식 및 출자증권 양도결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    otcprStkInvscrTrfDecsn(accessToken, options) {
+      return Request.get(accessToken, '/otcprStkInvscrTrfDecsn.json', options)
+    },
+    /**
+     * 유형자산 양도 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    tgastTrfDecsn(accessToken, options) {
+      return Request.get(accessToken, '/tgastTrfDecsn.json', options)
+    },
+    /**
+     * 유형자산 양수 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    tgastInhDecsn(accessToken, options) {
+      return Request.get(accessToken, '/tgastInhDecsn.json', options)
+    },
+    /**
+     * 타법인 주식 및 출자증권 양수결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    otcprStkInvscrInhDecsn(accessToken, options) {
+      return Request.get(accessToken, '/otcprStkInvscrInhDecsn.json', options)
+    },
+    /**
+     * 영업양도 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    bsnTrfDecsn(accessToken, options) {
+      return Request.get(accessToken, '/bsnTrfDecsn.json', options)
+    },
+    /**
+     * 영업양수 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    bsnInhDecsn(accessToken, options) {
+      return Request.get(accessToken, '/bsnInhDecsn.json', options)
+    },
+    /**
+     * 자기주식취득 신탁계약 해지 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    tsstkAqTrctrCcDecsn(accessToken, options) {
+      return Request.get(accessToken, '/tsstkAqTrctrCcDecsn.json', options)
+    },
+    /**
+     * 자기주식취득 신탁계약 체결 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    tsstkAqTrctrCnsDecsn(accessToken, options) {
+      return Request.get(accessToken, '/tsstkAqTrctrCnsDecsn.json', options)
+    },
+    /**
+     * 자기주식 처분 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    tsstkDpDecsn(accessToken, options) {
+      return Request.get(accessToken, '/tsstkDpDecsn.json', options)
+    },
+    /**
+     * 자기주식 취득 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    tsstkAqDecsn(accessToken, options) {
+      return Request.get(accessToken, '/tsstkAqDecsn.json', options)
+    },
+    /**
+     * 주식교환·이전 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    stkExtrDecsn(accessToken, options) {
+      return Request.get(accessToken, '/stkExtrDecsn.json', options)
+    },
+    /**
+     * 회사분할합병 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    cmpDvmgDecsn(accessToken, options) {
+      return Request.get(accessToken, '/cmpDvmgDecsn.json', options)
+    },
+    /**
+     * 회사분할 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    cmpDvDecsn(accessToken, options) {
+      return Request.get(accessToken, '/cmpDvDecsn.json', options)
+    },
+    /**
+     * 회사합병 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    cmpMgDecsn(accessToken, options) {
+      return Request.get(accessToken, '/cmpMgDecsn.json', options)
+    },
+    /**
+     * 주권 관련 사채권 양수 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    stkrtbdInhDecsn(accessToken, options) {
+      return Request.get(accessToken, '/stkrtbdInhDecsn.json', options)
+    },
+    /**
+     * 주권 관련 사채권 양도 결정
+     * @param {string} accessToken
+     * @param {keyIssuesReportOptions} options
+     */
+    stkrtbdTrfDecsn(accessToken, options) {
+      return Request.get(accessToken, '/stkrtbdTrfDecsn.json', options)
+    },
   }
 }
 
